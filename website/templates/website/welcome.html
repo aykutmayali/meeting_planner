@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome !</title>
+</head>
+<body>
+    <h1> Welcome to Meeting Planner </h1>
+    <p>
+        This website build with Django, it is a meeting room planner
+    </p>
+    <p> {{ message }}  {{ x }} </p>
+   <!-- <p style="text-shadow: crimson;color: blue"> There are {{ num_meetings }} meetings scheduled</p> -->
+    <h2>
+        Meetings
+    </h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <!-- <a href="/meetings/{{ meeting.id }}"> {{ meeting.title }} </a> -->
+                <a href="{% url 'detail' meeting.id %}"> {{ meeting.title }} </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

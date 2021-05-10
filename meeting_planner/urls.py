@@ -18,11 +18,16 @@ from django.urls import path
 from website.views import welcome
 from website.views import date
 from website.views import about
+from meetings.views import detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
    # path('welcome.html', welcome),
-    path('', welcome), # '' makes it starting page
+   # path('', welcome), # '' makes it starting page , first is url, second is view function
     path('date',date),
     path('about', about),
+   # path('meetings/<int:id>',detail)
+   # path('meetings/<int:id>', detail, name='detail'),   # name is for {% url 'detail' meeting.id %}
+    path('adddifferentthingsstillworks/meetings/<int:id>', detail, name='detail'),
+    path('', welcome, name='welcome'),
 ]
