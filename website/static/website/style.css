@@ -1,0 +1,21 @@
+body {
+    margin: 1%;
+    background-color: honeydew;
+}
+
+title, h1 {
+    background-color: crimson;
+    padding: 10px;
+    color: steelblue;
+    text-align: center;
+}
+
+a {
+    display: block;
+    margin: 20px auto;
+    background: crimson;
+    color: white;
+    border: 0;
+    padding: 6px 10px;
+}
+

@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome !</title>
-</head>
-<body>
+{#{% load static %}#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Welcome !</title>#}
+{#    <link rel="stylesheet" href="/static/website/style.css">#}
+{#</head>#}
+{#<body>#}
+
+{% extends "base.html" %}
+{% block title %} Welcome {% endblock %}
+{% block content %}
     <h1> Welcome to Meeting Planner </h1>
     <p>
         This website build with Django, it is a meeting room planner
     </p>
     <p> {{ message }}  {{ x }} </p>
    <!-- <p style="text-shadow: crimson;color: blue"> There are {{ num_meetings }} meetings scheduled</p> -->
+{#    <img src="{% static 'website/calender.png' %}" width="100px">#}
     <h2>
         Meetings
     </h2>
@@ -22,5 +29,9 @@
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+    <a href="{% url 'new' %}"> New Meeting </a>
+    <a href="{% url 'rooms' %}"> <h2>Rooms List</h2> </a>
+    <a href="/admin/"> <h2>Admin Page </h2></a>
+{#</body>#}
+{#</html>#}
+{% endblock %}
