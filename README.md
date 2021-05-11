@@ -94,6 +94,8 @@ auth_user_user_permissions
 
 # Setting up Model View Template
 -----------------------------------------------------------------------------------[step-4]
+
+- adding html (template) file 
 --> create files in website --> templates -->website --> new html5 file welcome.html
 --> make modifications in --> website -->views.py
 
@@ -130,6 +132,7 @@ auth_user_user_permissions
 # Styling
 -----------------------------------------------------------------------------------[step-5]
 
+- adding css styling
 #1 create a css stylesheet
 #2 apply css to html
 #3 template inheritance
